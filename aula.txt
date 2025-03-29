@@ -20,4 +20,36 @@ aula 40- -24- busca cep
 
 go run main.go http://viacep.com.br/ws/60426-000/json/
 
-na aula de templetes 3  é possível fazer condicional com o uso do arquivos externos
+na aula de templetes 3  é possível fazer condicional com o uso dna ao arquivos externos
+
+
+na aula de banco de dados 
+1- rodar o composer, as vezes é necessario encerra  a versão anterio
+docker-compose down -v
+docker system prune -f
+docker-compose up
+2-criar a tabela do banco
+docker-compose exec mysql bash
+mysql -u root -p goex
+senha: root
+create table products(id varchar(255), name varchar(80), price decimal(10,2), primary key(id));
+3-rodar o arquivo main
+go run main.go
+
+
+Estudo de gorm
+go get -u gorm.io/gorm
+1-
+go run main.go
+2
+- rodar o composer, as vezes é necessario encerra  a versão anterio
+docker-compose down -v
+docker system prune -f
+docker-compose up
+3-criar a tabela do banco
+docker-compose exec mysql bash
+mysql -u root -p goex
+senha: root
+show tables;
+desc products;
+select * from products;
